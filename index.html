@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JNTUA SJCET COLLEGE</title>
+
+    <style>
+        .img0{
+          width: 100px;
+          height: 100px;
+          margin-left: 10px;
+          display: block;
+       
+        }
+        body
+          {
+           
+            
+             /* background-image: url("star.gif"); */
+             background-color: white;
+             background-size: cover;
+           background-position: center;
+           padding: 0;
+            margin: 0;
+               }
+               .back {
+          background-color: white;
+          margin-left: 150px;
+          margin-right: 150px;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          border: 5px solid black;
+         
+            }
+            .btn1{
+              float: left;
+              margin-top: 170px;
+              margin-left: -135px;
+              border: 5px solid black;
+              padding-bottom: 10px;
+              background-color: #8a3147;
+              color: white;
+            }
+            .btn2{
+             float: left;
+              border: 5px solid black;
+              padding-bottom: 10px;
+              background-color: #8a3147;
+              margin-top: 170px;
+               margin-left: -135px;
+            }
+            .btn3{
+             background-color: #8a3147;
+              border: 5px solid black;
+              padding-bottom: 10px;
+              margin-top: 170px;
+              margin-left: 200px;
+              float: left;
+              margin-right: -100px;
+            }
+            .btn1:hover{
+              background-color: #ac5168;
+            }
+            
+            .btn2:hover{
+              background-color:#ac5168;
+            }
+            .btn3:hover{
+              background-color: #ac5168;
+            }
+            #img1{
+              width: 150px;
+              height: 150px;
+              float: left;
+              border: 5px solid black;
+              border-style:solid;
+              margin-left: 50px;
+              
+            }
+            #img2{
+              width: 150px;
+              height: 150px; 
+             float: left;
+             margin-left: 200px;
+             margin-top: 4px;
+              border: 5px solid black;
+              
+            }
+            #img3{
+             width: 150px;
+             height: 150px;
+             border: 5px solid black;
+             margin-top: 4px;
+             margin-left: -100px;
+            }
+            #blink {
+            font-size: 20px;
+            font-weight: bold;
+            color: red;
+            transition: 1s;
+            text-align: center;
+        }
+        .header{
+          
+        margin: 5px auto;
+        width: 100%;
+        height: 50px;
+        background: #8a3147;
+        padding: 10px 0; 
+        float: initial;
+        padding-top: 10px;
+        
+        }
+        .footer{
+          margin: 0 auto;
+        width: 100%;
+        height: 50px;
+        background: #8a3147;
+        padding: 10px 0;
+        padding-top: 10px;
+       margin-top: 100px;
+      
+        }
+        .foot{
+          padding: 10px;
+        }
+       
+            
+          </style>
+    </head>
+
+   <body>
+
+     <div class="header">
+
+       <nav style="font-size: 40px; color: white;">
+           <center> Welcome To SJCET</center>
+       </nav>
+     </div>
+
+    <p><center>
+        <img src="./assets/images/logocl.jpg" class="img0" ></center></p>
+
+<header>  
+
+   <p id="blink" style="font-size:  30px; color: red;">   <strong>ST. JOHNS COLLEGE OF ENGINEERING AND TECHNOLOGY<br>
+   <kbd> Accredited by NAAC,Approved by AICTE</kbd><br>
+  Recognized by UGC under <var>2(f), & 12(B)</var> <br>
+    and Affliated to JNTUA, Anantapuramu
+  </strong>
+    </p>
+
+  </header>
+
+  <script type="text/javascript">
+    var blink = document.getElementById('blink');
+    setInterval(function() {
+        blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+    }, 1500);
+</script>
+
+  </header>
+<div class="back">
+    <center>
+    <img src="./assets/images/stu.jpg"  id="img1">
+
+    <button class="btn1">
+      <a href="studentlogin.html" style="text-decoration: none;"><br>
+        <b style="text-align: center; color: white;">Student-login</button></b>
+        
+    <img src="./assets/images/hod.jpg"  id="img2">
+  
+    <button class="btn2">
+      <a href="faculty_login.html" style="text-decoration: none;"><br>
+        <b style="text-align: center; color: white;">Faculty-login</button></b>
+      
+    <img src="./assets/images/prin.jpg" id="img3">
+
+    <button class="btn3">
+
+      <a href="admin.html" style="text-decoration: none;"><br>
+        <b style="text-align: center ; color: white; "> Admin-login</button></b></center></br>
+    </div>
+
+    <div class="footer">
+      <nav>
+
+      
+    <footer>
+
+      <!-- <marquee  direction="right" scrollamount="13"  height="200">
+        <img src="my.jpg" width="1000" height="200" style="padding-top: 10px;">
+      </marquee> -->
+
+      <span class="foot" style="color: white; ">
+
+        <center>&copy; 2019&nbsp;SJCET | All Rights Reserved. Powered by dept. of CSE.</center>
+
+      </span>
+
+    </footer>
+
+  </nav>
+
+</div>
+      <!--<h3 align="center" style="color:rgb(255, 0, 55)"><u>College Address</u></h3>
+        <h4 align="center" style="color:white"><b>St. Johns College of Engg. & Tech.</h4>
+                               <h5 align="center" style="color:white">Yerrakota, Yemmiganur,</h5>
+                              <h5 align="center" style="color:white"> Andhra Pradesh,</h5>
+                               <h5 align="center" style="color:white">INDIA-518360</h5>-->
+  
+   </body>
+  
+</html>

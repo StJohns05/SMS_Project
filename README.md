@@ -1,1 +1,2 @@
-# SMS_Project
+# SMS_Official
+Student Information Management System
