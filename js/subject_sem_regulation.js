@@ -61,7 +61,7 @@
              
 
                
-                var regulation = document.getElementById("regulation");
+                var regulation =  document.getElementById("regulation");
                 
                  
                   if(regulation.value == "")
