@@ -8,6 +8,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Add subject Regulation and sem details</title>
 
+
             <script
             src="https://kit.fontawesome.com/64d58efce2.js"
             crossorigin="anonymous"
@@ -36,17 +37,12 @@
                 
                     
             .container {   
-              /* padding: 100px;    */
-        background-color:#8a3147  ;
-        color: white;
-        padding: 10px;
-        margin-top: 50px;
-          /* display: inline-block; */
+                  padding: 50px;   
+                  background-color:#8a3147;  
                   
               } 
               .container input{
                 background-color:white;
-              
                 
             
               }  
@@ -75,9 +71,16 @@ hr{
 
                   
               </style>
+
+                        
+              <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+              <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+              <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
             </head>
+
             
             <body id="update" style="color: white;">
+
                   <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -272,6 +275,7 @@ hr{
                   
                 </select></li><br>
 
+
            
                   <li> <label><b>semester : </b></label> 
             
@@ -370,7 +374,6 @@ hr{
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/faculty_dashboard.js"></script>
       <script type="text/javascript" src="./js/subject_sem_regulation.js"></script>
-
     
 </body>
 </html>

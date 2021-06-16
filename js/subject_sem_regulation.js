@@ -1,3 +1,4 @@
+
 var regulation = "R15"; 
 var branch = "CSE";
 var semester = "Semester-1";
@@ -95,74 +96,13 @@ var semester = "Semester-1";
                 return false;
                 }
 
-               /*//subject
-                var subject=document.getElementById("subject");
-                if(subject.value==null)
-                {
-                  
-                alert("Please Enter Subject Details!!");
-                subject.focus();
-                return false;
-                }
-
-                //lab
-                var lab=document.getElementById("lab");
-                if(lab.value==null)
-                {
-                  
-                alert("Please Enter Lab Details!!");
-                lab.focus();
-                return false;
-                }*/
-            
-                // else
-                //     {
-                //         alert("Data Saved Successfully!!")
-                //     }
-
+              
                 regulation = regulationRef.value.toUpperCase();
                 branch = branchRef.value;
                 semester = semesterRef.value;
                 return true;
                 }
                     
-                    
-        
-        
-           
-     
-          
-       
-        
-              //excel sheet download
-
-              /* document.getElementById("export").onclick=function(){
-                    var tableId= document.getElementById("tableData").id;
-                    htmlTableToExcel(tableId, filename = "");
-                }
-               var htmlTableToExcel= function(tableId, fileName = ""){
-                var excelFileName="C:\Users\AMULYA\Desktop\SMS.xlsx";
-                var TableDataType = 'application/vnd.ms-excel';
-                var selectTable = document.getElementById(tableId);
-                var htmlTable = selectTable.outerHTML.replace(/ /g, '%20');
-                
-                filename = filename?filename+'.xls':excelFileName+'.xls';
-                var excelFileURL = document.createElement("a");
-                document.body.appendChild(excelFileURL);
-                
-                if(navigator.msSaveOrOpenBlob){
-                    var blob = new Blob(['\ufeff', htmlTable], {
-                        type: TableDataType
-                    });
-                    navigator.msSaveOrOpenBlob( blob, fileName);
-                }else{
-                    
-                    excelFileURL.href = 'data:' + TableDataType + ', ' + htmlTable;
-                    excelFileURL.download = fileName;
-                    excelFileURL.click();
-                }
-            }*/
-
 setTimeout(() => {
     document.querySelector("#newrow").click();
     document.querySelector("#newlabrow").click();  
@@ -290,14 +230,3 @@ function capitalize(str) {
     return res;
 }
 
-// Database fetch subjects
-
-// database.ref().child("Subjects").child("R15").child("CSE").child("Semester-1").get().then(  (snapshot) => {
-  
-//     if (snapshot.exists()) {
-//         console.log(snapshot.val());
-//     }
-// })
-// .catch((e) => {
-//       console.log(e);
-//   });
