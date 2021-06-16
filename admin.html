@@ -5,59 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="./css/admin_login_styles.css" />
+    src="https://kit.fontawesome.com/64d58efce2.js"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="./css/admin_login_styles.css" />
 
- 
-    <link rel="stylesheet" href="style2.css" />
-    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+   https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+<title>Sign in & Sign up Form</title>
+</head>
+
+<body><center>
 
 
+  <div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <div >
+                <img src="./assets/images/logocl.jpg" alt="">
+          <div class="sign-in-form" name="form1">
 
-    <title>Sign in & Sign up Form</title>
-  </head>
-  
-  <body>
-    <div class="container">
-      <div class="forms-container">
-        <div class="signin-signup">
+              <h2 class="title"><i>Admin</i> <strong>Sign in</strong></h2>
+              <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="email" id="email" placeholder="email" />
+              </div>
+              <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="password"  id="password"/>
+              <span toggle="#password-field" class="bi bi-eye-slash  toggle-password" ></span>
 
-          
+              </div>
+              <div>
+                <!-- <button onclick="signUp()" id="signUp">SignUp</button> -->
+               <input type="submit" onclick="signIn()" value="Login"class="btn solid"id="signIn">
+               <!-- <button onclick="signOut()" id="signOut">SignOut</button> -->
+              
+              </div>
+             
+              
+        </div>
+        <script src="./js/admin_login.js"></script>
 
-          <div >
-                  <img src="images/logo.jpg" alt="">
-                <h2 class="title"><i>Admin</i> <strong>Sign in</strong></h2>
-                <div class="input-field">
-                  <i class="fas fa-user"></i>
-                  <input type="email" id="email" placeholder="email"  />
-                </div>
-                <div class="input-field">
-                  <i class="fas fa-lock"></i>
-                  <input type="password" placeholder="password" id="password"/>
-                </div>
-                <div>
-                  <!-- <button onclick="signUp()" id="signUp">SignUp</button> -->
-                 <button onclick="signIn()" id="signIn">SignIn</button>
-                 <button onclick="signOut()" id="signOut">SignOut</button>
-                
-            <div id="suggest">
-              <label id="createid">Don't have Account,</label>
-              <a href="#" onclick="signUp()" id="create">Create Account</a>
-          </div>
-                </div>
-               
-                
-          </div>
-          <script src="valid.js"></script>
-         <script src="./js/admin_login.js"></script>
-        </body>
-        </html>
-
+      </center> </body>
+      </html>
 
