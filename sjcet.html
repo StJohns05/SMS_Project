@@ -1,0 +1,134 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>srtdash - Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/metisMenu.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.min.css">
+    <!-- amchart css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <!-- others css -->
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/default-css.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- preloader area start -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- preloader area end -->
+    <!-- page container area start -->
+    <div class="page-container">
+        <!-- sidebar menu area start -->
+        <div class="sidebar-menu">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <a href="index.html"><img src="assets/images/icon/logo.png" alt="logo"></a>
+                </div>
+            </div>
+            <div class="main-menu">
+                <div class="menu-inner">
+                    <nav>
+                        <ul class="metismenu" id="menu">
+                            <li class="active">
+                                <a href="index2.html" aria-expanded="true"><i class="ti-dashboard"></i><span>Admin dashboard</span></a>
+
+                                
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-pie-chart"></i><span>Attendance</span></a>
+                                <ul class="collapse">
+                                    <li><a href="barchart.html">Student Attendance</a></li>
+                                    <li><a href="piechart.html">Staff Attendance</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="message description.html" aria-expanded="true"><i class="ti-palette"></i><span>Message Description</span></a>
+                                
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-table"></i>
+                                    <span>student data</span></a>
+                                <ul class="collapse">
+                                    <li><a href="table-basic.html">student results</a></li>
+                                    <!--<li><a href="table-layout.html">table layout</a></li> -->
+                                    <li><a href="data table.html">list of students</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="maps.html"aria-expanded="true"><i class="ti-map-alt"></i> <span>Placements</span></a>
+                              <ul class="collapse">
+                                <li><a href="barchart.html">on campus</a></li>
+                                <li><a href="piechart.html">off campus</a></li>
+                              </ul>
+                            </li> 
+                            <li><a href="invoice.html"><i class="ti-receipt"></i> <span>Academic Projects</span></a></li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layers-alt"></i> <span>semister-wise data</span></a>
+                                <ul class="collapse">
+                                    <li><a href="login.html">semister1 data</a></li>
+                                    <li><a href="login2.html">semister2 data</a></li>
+                                    <li><a href="login3.html">semister3 data</a></li>
+                                    <li><a href="register.html">semister4 data</a></li>
+                                    <li><a href="register2.html">semister5 data</a></li>
+                                    <li><a href="register3.html">semister6 data</a></li>
+                                    <li><a href="register4.html">semister7 data</a></li>
+                                    <li><a href="screenlock.html">semister8 data</a></li>
+                                   
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-align-left"></i> <span>Multi
+                                        level menu</span></a>
+                                <ul class="collapse">
+                                    <li><a href="#">Item level (1)</a></li>
+                                    <li><a href="#">Item level (1)</a></li>
+                                    <li><a href="#" aria-expanded="true">Item level (1)</a>
+                                        <ul class="collapse">
+                                            <li><a href="#">Item level (2)</a></li>
+                                            <li><a href="#">Item level (2)</a></li>
+                                            <li><a href="#">Item level (2)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Item level (1)</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-table"></i>
+                                    <span> contact data</span></a>
+                                <ul class="collapse">
+                                    <li><a href="table-basic.html">faculty contacts</a></li>
+                                    <!--<li><a href="table-layout.html">table layout</a></li>  here the contact  should contain phno with mail id -->
+                                    <li><a href="data table.html">students contacts</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="404.html"><i class="fa fa-exclamation-triangle"></i>
+                                    <span>logout</span></a><!--direct to admin login page -->
+                               
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- sidebar menu area end -->
+        </div>
+        </body>
+        </html>
