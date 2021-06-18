@@ -22,7 +22,7 @@ auth.onAuthStateChanged(function(user) {
     // console.log(user.displayName);
     if (user) {
     
-            studentNameDisplay.innerHTML = user.displayName + "<i class='fa fa-angle-down'></i>";
+            studentNameDisplay.innerHTML = 'Hi,'+user.displayName + "<i class='fa fa-angle-down'></i>";
     } else {
             window.location.href = "./studentlogin.html";
     }      
