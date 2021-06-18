@@ -50,7 +50,7 @@
         <div class="sidebar-menu">
             <div class="sidebar-header">
                 <div class="logo">
-                   <h3 style="color: #fff;">Student Dashboard</h3>
+                   <h3 style="color: #fff;">St.Johns College</h3>
                 </div>
             </div>
             <div class="main-menu">
@@ -60,9 +60,10 @@
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                                 <ul class="collapse">
-                                    <li><a href="#">Notification</a></li>
-                                    <li><a href="view_student_profile.html">View-Profile</a></li>
-                                    <li><a href="#">Result</a></li>
+                                    <li><a href="view_student_profile.html">Profile</a></li>
+
+                                    <li><a href="student_results.html">Result</a></li>
+
 
                                 </ul>
                             </li>
@@ -159,12 +160,6 @@
                                     </div>
                                 </div>
                             </li>
-
-                            
-
-                            <li class="settings-btn">
-                                <i class="ti-settings"></i>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -189,7 +184,6 @@
                         
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Message</a>
-                                <a class="dropdown-item" href="#">Settings</a>
                                 <a class="dropdown-item" id="sign-out-btn" href="./studentlogin.html">Sign Out</a>
 
                                 
@@ -204,7 +198,7 @@
 
             <div class="main-content-inner">
               <div class="container">
-  <center><h1>Fill the Details</h1></center>
+  <center><h2>Fill the Details</h2></center>
     <form>
         <hr style="border-color: white;">
         <center><h3>Login Details</h3></center><hr style="border-color: white;">
@@ -215,7 +209,7 @@
  <hr style="border-color: white;">
 
 
- <center><h2>User Details</h2></center> <hr style="border-color: white;">
+ <center><h3>User Details</h3></center> <hr style="border-color: white;">
 
        <!-- <strong> Unique Identity Number : </strong><input type="text" name="uid" id="uid"><br><br> -->
         
@@ -232,7 +226,7 @@
  
 <!--Personal Details-->
 
- <center><h2>Parent Details</h2>  <hr style="border-color: white;"></center>
+ <center><h3>Parent Details</h3>  <hr style="border-color: white;"></center>
  
  <strong> <label>Father Name :</label> </strong><input type="text" name="fname"  id="fname"> <br> <br>
  <strong> <label>Mother Name : </label></strong><input type="text" name="mname"  id="mname"> <br> <br>
@@ -240,14 +234,14 @@
  <strong> <label>Alternate Mobile Number :</label></strong> <input type="text" name="phone"   id="altphone"><br> <br>
  <hr style="border-color: white;">
  
- <center><h2>Personal Details</h2>  <hr style="border-color: white;"></center>
+ <center><h3>Personal Details</h3>  <hr style="border-color: white;"></center>
   
   <strong><label>Date of Birth :</label></strong> <input type="text" name="dob" id="dob"> <br> <br>
   <strong ><label>Gender :</label> </strong> <input type="text" name="gender" id="gender"> <br> <br>
 
- <strong><label>Aadhar Number : </label></strong> <input type="text" name="aadhar" id="aadhar"><br><br>	 <strong><label>Aadhar-url</label></strong><input type="url" name="aadhardoc" id="aadhardoc"  placeholder="Input your google docs link"size=30 required> <br><br>
- <strong><label>Annual Income : </label></strong>  <input type="text" name="income" id="income"> <br><br>	<strong> <label>Annual-url</label> </strong> <input type="url" name="incomedoc" id="incomedoc" placeholder="Input your google docs link"size=30 required> <br><br>
- <strong> <label>Caste :</label> </strong><input type="text" name="caste" id="caste"><br><br>	 <strong><label>Caste-url</label> </strong><input type="url" name="castedoc" id="castedoc" placeholder="Input your google docs link"size=30 required><br><br>
+ <strong><label>Aadhar Number : </label></strong> <input type="password" name="aadhar" id="aadhar"><br><br>	 <strong><label>Aadhar URL</label></strong><input type="url" name="aadhardoc" id="aadhardoc"  placeholder="Input your google docs link"size=30 required> <br><br>
+ <strong><label>Annual Income : </label></strong>  <input type="text" name="income" id="income"> <br><br>	<strong> <label>Income URL</label> </strong> <input type="url" name="incomedoc" id="incomedoc" placeholder="Input your google docs link"size=30 required> <br><br>
+ <strong> <label>Caste :</label> </strong><input type="text" name="caste" id="caste"><br><br>	 <strong><label>Caste URL</label> </strong><input type="url" name="castedoc" id="castedoc" placeholder="Input your google docs link"size=30 required><br><br>
 
 
  <!-------Automatic filled if one field is same as another------->
@@ -266,7 +260,7 @@
 
   <!--Previous Graduation Details-->
 
-       <center><h2>Previous Graduation Details</h2></center>  <hr style="border-color: white;">
+       <center><h3>Previous Graduation Details</h3></center>  <hr style="border-color: white;">
        <h4>SSC Details : </h4><br>
      <strong> <label> HallTicket Number :</label> </strong><input type="text" name="halticket" id="sscticket"> <br><br>
       <strong> <label>Percentage :</label> </strong><input type="text" name="percentage"   title="This must be a number with up to 2 decimal places and/or %/convert cgpa into percentage" id="sscpercentage"><br><br>
@@ -306,184 +300,7 @@
 <!-- footer area end-->
 </div>
 <!-- page container area end -->
-<!-- offset area start -->
-<div class="offset-area">
-<div class="offset-close"><i class="ti-close"></i></div>
-<ul class="nav offset-menu-tab">
-<li><a class="active" data-toggle="tab" href="#activity">Activity</a></li>
-<li><a data-toggle="tab" href="#settings">Settings</a></li>
-</ul>
-<div class="offset-content tab-content">
-<div id="activity" class="tab-pane fade in show active">
-<div class="recent-activity">
-   <div class="timeline-task">
-       <div class="icon bg1">
-           <i class="fa fa-envelope"></i>
-       </div>
-       <div class="tm-title">
-           <h4>Rashed sent you an email</h4>
-           <span class="time"><i class="ti-time"></i>09:35</span>
-       </div>
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-       </p>
-   </div>
-   <div class="timeline-task">
-       <div class="icon bg2">
-           <i class="fa fa-check"></i>
-       </div>
-       <div class="tm-title">
-           <h4>Added</h4>
-           <span class="time"><i class="ti-time"></i>7 Minutes Ago</span>
-       </div>
-       <p>Lorem ipsum dolor sit amet consectetur.
-       </p>
-   </div>
-   <div class="timeline-task">
-       <div class="icon bg2">
-           <i class="fa fa-exclamation-triangle"></i>
-       </div>
-       <div class="tm-title">
-           <h4>You missed you Password!</h4>
-           <span class="time"><i class="ti-time"></i>09:20 Am</span>
-       </div>
-   </div>
-   <div class="timeline-task">
-       <div class="icon bg3">
-           <i class="fa fa-bomb"></i>
-       </div>
-       <div class="tm-title">
-           <h4>Member waiting for you Attention</h4>
-           <span class="time"><i class="ti-time"></i>09:35</span>
-       </div>
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-       </p>
-   </div>
-   <div class="timeline-task">
-       <div class="icon bg3">
-           <i class="ti-signal"></i>
-       </div>
-       <div class="tm-title">
-           <h4>You Added Kaji Patha few minutes ago</h4>
-           <span class="time"><i class="ti-time"></i>01 minutes ago</span>
-       </div>
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-       </p>
-   </div>
-   <div class="timeline-task">
-       <div class="icon bg1">
-           <i class="fa fa-envelope"></i>
-       </div>
-       <div class="tm-title">
-           <h4>Ratul Hamba sent you an email</h4>
-           <span class="time"><i class="ti-time"></i>09:35</span>
-       </div>
-       <p>Hello sir , where are you, i am egerly waiting for you.
-       </p>
-   </div>
-   <div class="timeline-task">
-       <div class="icon bg2">
-           <i class="fa fa-exclamation-triangle"></i>
-       </div>
-       <div class="tm-title">
-           <h4>Rashed sent you an email</h4>
-           <span class="time"><i class="ti-time"></i>09:35</span>
-       </div>
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-       </p>
-   </div>
-   <div class="timeline-task">
-       <div class="icon bg2">
-           <i class="fa fa-exclamation-triangle"></i>
-       </div>
-       <div class="tm-title">
-           <h4>Rashed sent you an email</h4>
-           <span class="time"><i class="ti-time"></i>09:35</span>
-       </div>
-   </div>
-   <div class="timeline-task">
-       <div class="icon bg3">
-           <i class="fa fa-bomb"></i>
-       </div>
-       <div class="tm-title">
-           <h4>Rashed sent you an email</h4>
-           <span class="time"><i class="ti-time"></i>09:35</span>
-       </div>
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-       </p>
-   </div>
-   <div class="timeline-task">
-       <div class="icon bg3">
-           <i class="ti-signal"></i>
-       </div>
-       <div class="tm-title">
-           <h4>Rashed sent you an email</h4>
-           <span class="time"><i class="ti-time"></i>09:35</span>
-       </div>
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-       </p>
-   </div>
-</div>
-</div>
-<div id="settings" class="tab-pane fade">
-<div class="offset-settings">
-   <h4>General Settings</h4>
-   <div class="settings-list">
-       <div class="s-settings">
-           <div class="s-sw-title">
-               <h5>Notifications</h5>
-               <div class="s-swtich">
-                   <input type="checkbox" id="switch1" />
-                   <label for="switch1">Toggle</label>
-               </div>
-           </div>
-           <p>Keep it 'On' When you want to get all the notification.</p>
-       </div>
-       <div class="s-settings">
-           <div class="s-sw-title">
-               <h5>Show recent activity</h5>
-               <div class="s-swtich">
-                   <input type="checkbox" id="switch2" />
-                   <label for="switch2">Toggle</label>
-               </div>
-           </div>
-           <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
-       </div>
-       <div class="s-settings">
-           <div class="s-sw-title">
-               <h5>Show your emails</h5>
-               <div class="s-swtich">
-                   <input type="checkbox" id="switch3" />
-                   <label for="switch3">Toggle</label>
-               </div>
-           </div>
-           <p>Show email so that easily find you.</p>
-       </div>
-       <div class="s-settings">
-           <div class="s-sw-title">
-               <h5>Show Task statistics</h5>
-               <div class="s-swtich">
-                   <input type="checkbox" id="switch4" />
-                   <label for="switch4">Toggle</label>
-               </div>
-           </div>
-           <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
-       </div>
-       <div class="s-settings">
-           <div class="s-sw-title">
-               <h5>Notifications</h5>
-               <div class="s-swtich">
-                   <input type="checkbox" id="switch5" />
-                   <label for="switch5">Toggle</label>
-               </div>
-           </div>
-           <p>Use checkboxes when looking for yes or no answers.</p>
-       </div>
-   </div>
-</div>
-</div>
-</div>
-</div>
-   <!-- offset area end -->
+
    <!-- jquery latest version -->
    <script src="js/jquery-2.2.4.min.js"></script>
    <!-- bootstrap 4 js -->
@@ -493,8 +310,6 @@
    <script src="js/metisMenu.min.js"></script>
    <script src="js/jquery.slimscroll.min.js"></script>
    <script src="js/jquery.slicknav.min.js"></script>
-
-   
    <script src="js/plugins.js"></script>
    <script src="js/scripts.js"></script>
    <script src="./js/student_dashboard.js"></script>

@@ -7,14 +7,16 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Add subject Regulation and sem details</title>
+
+
             <script
             src="https://kit.fontawesome.com/64d58efce2.js"
             crossorigin="anonymous"
           ></script>
+                   
           <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
-            <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
-            <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
-        
+          <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
             <link rel="stylesheet" href="css/bootstrap.min.css">
             <link rel="stylesheet" href="css/font-awesome.min.css">
             <link rel="stylesheet" href="css/themify-icons.css">
@@ -32,31 +34,15 @@
             <script src="js/modernizr-2.8.3.min.js"></script>
 
             <style>
-                /* body {  
-                  font-family: Calibri, Helvetica, sans-serif;  
-                 
-                         margin-top:100px;
-                         margin-bottom:200px;
-                         margin-left:100px;
-                          margin-right:100px;
-                          background-color:white;
-                          background-size: cover;
-                          background-position: center;
-                               
-                              }   */
+                
                     
             .container {   
-              /* padding: 100px;    */
-        background-color:#8a3147  ;
-        color: white;
-        padding: 10px;
-        margin-top: 50px;
-          /* display: inline-block; */
+                  padding: 50px;   
+                  background-color:#8a3147;  
                   
               } 
               .container input{
                 background-color:white;
-              
                 
             
               }  
@@ -75,19 +61,26 @@ hr{
             border-collapse: collapse;  
             /* width: 100%;  */
             height: 50%;  
-            font-size: larger;
+            font-size: large;
         }  
     thead{  
         border: 2px solid white;   
         padding: 15px; 
-        font-size: larger; 
+        font-size: large; 
     }  
 
                   
               </style>
+
+                        
+              <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+              <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+              <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
             </head>
+
             
             <body id="update" style="color: white;">
+
                   <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -102,7 +95,7 @@ hr{
       <div class="sidebar-menu">
           <div class="sidebar-header">
               <div class="logo">
-                 <h3 style="color: #fff;">Faculty Dashboard</h3>
+                 <h3 style="color: #fff;">St.Johns College</h3>
               </div>
           </div>
           <div class="main-menu">
@@ -113,10 +106,12 @@ hr{
                               <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                               <ul class="collapse">
                                   
-                                  <li><a href="./faculty_view_profile.html" >Profile</a></li>
-                                  <li><a href="subject_sem_regulation.html" target="_parent">Student Academic Details</a></li>
-                                  <li><a href="./faculty_result_view.html" target="_parent">View Results</a></li>
-                                  <li><a href="#" target="_parent">Overall Performance</a></li>
+                                <li><a href="./faculty_view_profile.html" >Profile</a></li>
+                                <li><a href="subject_sem_regulation.html" target="_parent">Subjects/Regulation</a></li>
+                                <li><a href="./fill_marks.html" target="_parent">Submit Score</a></li>
+                                <li><a href="./fetch_results.html" target="_parent">Check Score</a></li>
+
+                                <li><a href="#" target="_parent">Overall Performance</a></li>
 
                               </ul>
                              
@@ -127,7 +122,7 @@ hr{
                              
                           </li>
                           <li>
-                              <a href="#" aria-expanded="true" target="_parent"><i class="ti-comments"></i><span>Results Feedback Form</span></a>
+                              <a href="#" aria-expanded="true" target="_parent"><i class="ti-comments"></i><span> Feedback Form</span></a>
                              
                           </li>
                           
@@ -223,11 +218,6 @@ hr{
                                   </div>
                               </div>
                           </li>
-
-
-                          <li class="settings-btn">
-                              <i class="ti-settings"></i>
-                          </li>
                       </ul>
                   </div>
               </div>
@@ -241,7 +231,7 @@ hr{
                           <h4 class="page-title pull-left">Dashboard</h4>
                           <ul class="breadcrumbs pull-left">
                               <li> <a href="./faculty_dashboard.html"> Home</a></li>
-                              <li><span>Dashboard</span></li>
+                              <li><span>Subjects/Regulation</span></li>
                           </ul>
                       </div>
                   </div>
@@ -251,8 +241,6 @@ hr{
                           <h4 class="user-name dropdown-toggle" id="faculty-name" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
                           <div class="dropdown-menu">
                               <a class="dropdown-item" href="#">Message</a>
-                              <a class="dropdown-item" href="#">Settings</a>
-                              <!-- <button id="sign-out-btn"><a class="dropdown-item" >Sign Out</a></button> -->
                               <a class="dropdown-item" id="sign-out-btn" href="./faculty_login.html">Sign Out</a>
                           </div>
                       </div>
@@ -265,96 +253,95 @@ hr{
             <div class="container"> 
                   
         
-              <h2 style="color: white;"><center>---Subject Details According to Branch, Regulation and Semister---</center></h2>
-              <hr/>
-              
-              <form name="sub">
-                 <!-- <h3 align="center" style="color: white;">Enter Student Registration No:
-                      <input type="Registration no" name="reg" onfocus="this.value=''" placeholder="Please Enter Here"/></h3>-->
-                      <ul>
-                       
-                      <li><label><b>Enter Regulation:</b></label>
-                          <input type="text" name="regulation" pattern="[R]{1}[0-9]{2}" required id="regulation"  onfocus="this.value=''" placeholder="Please Enter Regulation"/></li><br>
-          
-                      
-                      <li><label><b>Select Branch:</b></label>
-                      <select id="branch">
-                        <option value="branch">Branch</option>
-                        <option value="CSE">CSE</option>
-                        <option value="ECE">ECE</option>
-                        <option value="MECH">MECH</option>
-                        <option value="EEE">EEE</option>
-                        <option value="CIVIL">CIVIL</option>
-                        <option value="AI">ARTIFICIAL INTELLIGENCE</option>
-                        
-                      </select></li><br>
-      
+        <h4 style="color: white;"><center>Submit Academic Details</center></h4>
+        <hr/>
+        
+        <form name="sub">
+           
+                <ul>
                  
-                        <li> <label><b>Semister : </b></label> 
+                <li><label><b>Enter Regulation:</b></label>
+                    <input type="text" name="regulation" pattern="[R]{1}[0-9]{2}" required id="regulation"  onfocus="this.value=''" placeholder="Please Enter Regulation"/></li><br>
+    
+                
+                <li><label><b>Select Branch:</b></label>
+                <select id="branch">
+                  <option value="branch">Branch</option>
+                  <option value="CSE">CSE</option>
+                  <option value="ECE">ECE</option>
+                  <option value="MECH">MECH</option>
+                  <option value="EEE">EEE</option>
+                  <option value="CIVIL">CIVIL</option>
+                  <option value="AI">ARTIFICIAL INTELLIGENCE</option>
                   
-                          <select id="semister">
-                            <option value="sem">Semester</option>
-                            <option value="Semester-1">Semester-1</option>
-                            <option value="Semester-2">Semester-2</option>
-                            <option value="Semester-3">Semester-3</option>
-                            <option value="Semester-4">Semester-4</option>
-                            <option value="Semester-5">Semester-5</option>
-                            <option value="Semester-6">Semester-6</option>
-                            <option value="Semester-7">Semester-7</option>
-                            <option value="Semester-8">Semester-8</option>
-                            
-                          </select></li><br>
-      
-                          <!--subject Details-->
-                         
-                          <li><label><b>Subject Details:</b></label><br/>
-                      <table border="1" id="subject">
-                       <thead style="color:white;">
-                     
+                </select></li><br>
+
+
+           
+                  <li> <label><b>semester : </b></label> 
+            
+                    <select id="semester">
+                      <option value="sem">Semester</option>
+                      <option value="Semester-1">Semester-1</option>
+                      <option value="Semester-2">Semester-2</option>
+                      <option value="Semester-3">Semester-3</option>
+                      <option value="Semester-4">Semester-4</option>
+                      <option value="Semester-5">Semester-5</option>
+                      <option value="Semester-6">Semester-6</option>
+                      <option value="Semester-7">Semester-7</option>
+                      <option value="Semester-8">Semester-8</option>
+                      
+                    </select></li><br>
+
+                    <!--subject Details-->
+                    
+                   
+                    <li><label> <b> Subjects:</b></label><br>
+                <table border="1" id="subject" style="color: white;">
+                 <thead style="color:white;">
+               
+                 <tr>
+                    <th id="subcheck">Select</th>
+                    <th id="subcode" pattern="[0-9]{2}[A-Z]{1}[0-9]{5}" required>Subject-Code</th>
+                    <th id="subname" pattern="[A-Za-z]*" required>Enter-Subject-Name </th>
+                    <th id="subshortcuts" pattern="[A-Za-z]*" required>subject-Name-Shortcuts</th>
+                    
+                    </tr>
+                   </thead>
+                   <tbody>
+                  </tbody>
+                  </table></li></br>
+       <p>
+            <input type="button" value="Add new Subject details" id="newrow"/>
+            <input type="button" value="Delete subject details" id="delrow"/></br></br>
+            
+        
+
+                <!--lab-->    
+                <li>
+                  <label> <b> Lab:</b></label><br>
+                <table border="1" id="lab" style="color: white;">
+                    <thead style="color:white;">
+                       
                        <tr>
-                          <th id="subcheck">Select</th>
-                          <th id="subcode" pattern="[0-9]{2}[A-Z]{1}[0-9]{5}" required>Subject-Code</th>
-                          <th id="subname" pattern="[A-Za-z]*" required>Enter-Subject-Name </th>
-                          <th id="subshortcuts" pattern="[A-Za-z]*" required>subject-Name-Shortcuts</th>
-                          
-                          </tr>
-                         </thead>
-                         <tbody>
-                        </tbody>
-                        </table></li> <br>
-             <p>
-                  <input type="button" value="Add new Subject details" id="newrow"/>
-                  <input type="button" value="Delete subject details" id="delrow"/>
-                  <input type="submit" value="Save" id="export" onclick="check()" /></p>
-                  
-      
-                      <!--lab-->    <br>
-                      <li><label><b>LAB Details:</b></label><br>
-      
-                      <table border="1" id="lab" style="color: white;">
-                          <thead style="color:white;">
-                             
-                             <tr>
-                                  <th id="labcheck">Select</th>
-                                  <th id="labcode" pattern="[0-9]{2}[A-Z]{1}[0-9]{5}" required>lab-Code</th>
-                                  <th id="labname" pattern="[A-Za-z]*" required>Enter-Lab-Name </th>
-                                  <th id="labshortcuts" pattern="[A-Za-z]*" required>Lab-Name-Shortcuts</th>
-                                  
-                                  </tr>
-              </thead>
-                      <tbody>
-                      </tbody>
-                   </table></li> <br>
-                  <p>
-                      <input type="button" value="Add new Lab details" id="newlabrow"/>
-                          <input type="button" value="Delete Lab details" id="dellabrow"/>
-                          <input type="submit" value="Save" id="export1" onclick="check()"/></br></br>
-                          <!-- <button type="onsubmit" onclick="return checkvalue();" id="logout"><a href="./faculty.html" target="_blank">
-                              Log-Out</a></button>--> </p></li> 
-      
-      </form>
-         
-      
+                            <th id="labcheck">Select</th>
+                            <th id="labcode" pattern="[0-9]{2}[A-Z]{1}[0-9]{5}" required>lab-Code</th>
+                            <th id="labname" pattern="[A-Za-z]*" required>Enter-Lab-Name </th>
+                            <th id="labshortcuts" pattern="[A-Za-z]*" required>Lab-Name-Shortcuts</th>
+                            
+                            </tr>
+        </thead>
+                <tbody>
+                </tbody>
+             </table></li><br>
+            <p>
+                <input type="button" value="Add new Lab details" id="newlabrow"/>
+                    <input type="button" value="Delete Lab details" id="dellabrow"/>
+                    <br><br>
+                    <center><button id="export1" >Save</button></center></br>
+
+</form>
+   
            
 </div>
 </div>
@@ -372,184 +359,7 @@ hr{
 <!-- footer area end-->
 </div>
 <!-- page container area end -->
-<!-- offset area start -->
-<div class="offset-area">
-<div class="offset-close"><i class="ti-close"></i></div>
-<ul class="nav offset-menu-tab">
-<li><a class="active" data-toggle="tab" href="#activity">Activity</a></li>
-<li><a data-toggle="tab" href="#settings">Settings</a></li>
-</ul>
-<div class="offset-content tab-content">
-<div id="activity" class="tab-pane fade in show active">
-<div class="recent-activity">
-    <div class="timeline-task">
-        <div class="icon bg1">
-            <i class="fa fa-envelope"></i>
-        </div>
-        <div class="tm-title">
-            <h4>Rashed sent you an email</h4>
-            <span class="time"><i class="ti-time"></i>09:35</span>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-        </p>
-    </div>
-    <div class="timeline-task">
-        <div class="icon bg2">
-            <i class="fa fa-check"></i>
-        </div>
-        <div class="tm-title">
-            <h4>Added</h4>
-            <span class="time"><i class="ti-time"></i>7 Minutes Ago</span>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur.
-        </p>
-    </div>
-    <div class="timeline-task">
-        <div class="icon bg2">
-            <i class="fa fa-exclamation-triangle"></i>
-        </div>
-        <div class="tm-title">
-            <h4>You missed you Password!</h4>
-            <span class="time"><i class="ti-time"></i>09:20 Am</span>
-        </div>
-    </div>
-    <div class="timeline-task">
-        <div class="icon bg3">
-            <i class="fa fa-bomb"></i>
-        </div>
-        <div class="tm-title">
-            <h4>Member waiting for you Attention</h4>
-            <span class="time"><i class="ti-time"></i>09:35</span>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-        </p>
-    </div>
-    <div class="timeline-task">
-        <div class="icon bg3">
-            <i class="ti-signal"></i>
-        </div>
-        <div class="tm-title">
-            <h4>You Added Kaji Patha few minutes ago</h4>
-            <span class="time"><i class="ti-time"></i>01 minutes ago</span>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-        </p>
-    </div>
-    <div class="timeline-task">
-        <div class="icon bg1">
-            <i class="fa fa-envelope"></i>
-        </div>
-        <div class="tm-title">
-            <h4>Ratul Hamba sent you an email</h4>
-            <span class="time"><i class="ti-time"></i>09:35</span>
-        </div>
-        <p>Hello sir , where are you, i am egerly waiting for you.
-        </p>
-    </div>
-    <div class="timeline-task">
-        <div class="icon bg2">
-            <i class="fa fa-exclamation-triangle"></i>
-        </div>
-        <div class="tm-title">
-            <h4>Rashed sent you an email</h4>
-            <span class="time"><i class="ti-time"></i>09:35</span>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-        </p>
-    </div>
-    <div class="timeline-task">
-        <div class="icon bg2">
-            <i class="fa fa-exclamation-triangle"></i>
-        </div>
-        <div class="tm-title">
-            <h4>Rashed sent you an email</h4>
-            <span class="time"><i class="ti-time"></i>09:35</span>
-        </div>
-    </div>
-    <div class="timeline-task">
-        <div class="icon bg3">
-            <i class="fa fa-bomb"></i>
-        </div>
-        <div class="tm-title">
-            <h4>Rashed sent you an email</h4>
-            <span class="time"><i class="ti-time"></i>09:35</span>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-        </p>
-    </div>
-    <div class="timeline-task">
-        <div class="icon bg3">
-            <i class="ti-signal"></i>
-        </div>
-        <div class="tm-title">
-            <h4>Rashed sent you an email</h4>
-            <span class="time"><i class="ti-time"></i>09:35</span>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-        </p>
-    </div>
-</div>
-</div>
-<div id="settings" class="tab-pane fade">
-<div class="offset-settings">
-    <h4>General Settings</h4>
-    <div class="settings-list">
-        <div class="s-settings">
-            <div class="s-sw-title">
-                <h5>Notifications</h5>
-                <div class="s-swtich">
-                    <input type="checkbox" id="switch1" />
-                    <label for="switch1">Toggle</label>
-                </div>
-            </div>
-            <p>Keep it 'On' When you want to get all the notification.</p>
-        </div>
-        <div class="s-settings">
-            <div class="s-sw-title">
-                <h5>Show recent activity</h5>
-                <div class="s-swtich">
-                    <input type="checkbox" id="switch2" />
-                    <label for="switch2">Toggle</label>
-                </div>
-            </div>
-            <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
-        </div>
-        <div class="s-settings">
-            <div class="s-sw-title">
-                <h5>Show your emails</h5>
-                <div class="s-swtich">
-                    <input type="checkbox" id="switch3" />
-                    <label for="switch3">Toggle</label>
-                </div>
-            </div>
-            <p>Show email so that easily find you.</p>
-        </div>
-        <div class="s-settings">
-            <div class="s-sw-title">
-                <h5>Show Task statistics</h5>
-                <div class="s-swtich">
-                    <input type="checkbox" id="switch4" />
-                    <label for="switch4">Toggle</label>
-                </div>
-            </div>
-            <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
-        </div>
-        <div class="s-settings">
-            <div class="s-sw-title">
-                <h5>Notifications</h5>
-                <div class="s-swtich">
-                    <input type="checkbox" id="switch5" />
-                    <label for="switch5">Toggle</label>
-                </div>
-            </div>
-            <p>Use checkboxes when looking for yes or no answers.</p>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-</div>
-<!-- offset area end -->
+
 
     <!-- jquery latest version -->
     <script src="js/jquery-2.2.4.min.js"></script>
@@ -560,17 +370,13 @@ hr{
     <script src="js/metisMenu.min.js"></script>
     <script src="js/jquery.slimscroll.min.js"></script>
     <script src="js/jquery.slicknav.min.js"></script>
-
-   
     <script src="js/plugins.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="./js/faculty_dashboard.js"></script>
-    
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+    <script src="./js/faculty_dashboard.js"></script>
       <script type="text/javascript" src="./js/subject_sem_regulation.js"></script>
-
     
 </body>
 </html>
+
 

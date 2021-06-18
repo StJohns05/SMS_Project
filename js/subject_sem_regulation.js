@@ -1,4 +1,8 @@
 
+var regulation = "R15"; 
+var branch = "CSE";
+var semester = "Semester-1";
+
 //src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     // type="text/Javascript"> 
@@ -61,98 +65,168 @@
              
 
                
-                var regulation = document.getElementById("regulation");
+                const regulationRef = document.getElementById("regulation");
                 
                  
-                  if(regulation.value == "")
+                  if(regulationRef.value == "")
                     {
                        alert("Please Enter Regulation");
-                      regulation.focus();
+                      regulationRef.focus();
                        return false;
                     }
                 
                
                 //branch
-                var branch=document.getElementById("branch");
-                if(branch.value=="branch")
+                const branchRef = document.getElementById("branch");
+                if(branchRef.value=="branch")
                 {
                    alert("Please Select Branch!!");
-                   branch.focus();
+                   branchRef.focus();
                    return false;
                 } 
                 
 
-                //semister
-                var semister=document.getElementById("semister");
-                if(semister.value=="sem")
+                //semester
+                const semesterRef = document.getElementById("semester");
+                if(semesterRef.value=="sem")
                 {
                   
-                alert("Please Select semister!!");
-                semister.focus();
+                alert("Please Select semester!!");
+                semesterRef.focus();
                 return false;
                 }
 
-               /*//subject
-                var subject=document.getElementById("subject");
-                if(subject.value==null)
-                {
-                  
-                alert("Please Enter Subject Details!!");
-                subject.focus();
-                return false;
+              
+                regulation = regulationRef.value.toUpperCase();
+                branch = branchRef.value;
+                semester = semesterRef.value;
+                return true;
                 }
+                    
+setTimeout(() => {
+    document.querySelector("#newrow").click();
+    document.querySelector("#newlabrow").click();  
 
-                //lab
-                var lab=document.getElementById("lab");
-                if(lab.value==null)
-                {
-                  
-                alert("Please Enter Lab Details!!");
-                lab.focus();
-                return false;
-                }*/
+}, 100);
+
+
+const saveBtn = document.querySelector("#export1");
+
+saveBtn.addEventListener("click", (event) => {
+
+    if(check()) {
+
+        event.preventDefault();
+        //gets table
+        var oTable = document.getElementById('subject');
+
+        //gets rows of table
+        var rowLength = oTable.rows.length;
+
+        var subjects = [];
+
+        //loops through rows    
+        for (i = 1; i < rowLength; i++){
+
+            //gets cells of current row
+            var oCells = oTable.rows.item(i).cells;
+
+            //gets amount of cells of current row
+            var cellLength = oCells.length;
+
+            //loops through each cell in current row
+            var map = {
+                subject_code: "",
+                subject_name: "",
+                subject_short_name: "" 
+            };
             
-                else
-                    {
-                        alert("Data Saved Successfully!!")
-                    }
-                }
-                    
-                    
-        
-        
-           
-     
-          
-       
-        
-              //excel sheet download
+            for(var j = 1; j < cellLength; j++){
+                /* get your cell info here */
+                /* var cellVal = oCells.item(j).innerHTML; */
+                if (j == 1) {
 
-              /* document.getElementById("export").onclick=function(){
-                    var tableId= document.getElementById("tableData").id;
-                    htmlTableToExcel(tableId, filename = "");
+                    map.subject_code = oTable.rows[i].cells[j].getElementsByTagName("input")[0].value.toUpperCase();
                 }
-               var htmlTableToExcel= function(tableId, fileName = ""){
-                var excelFileName="C:\Users\AMULYA\Desktop\SMS.xlsx";
-                var TableDataType = 'application/vnd.ms-excel';
-                var selectTable = document.getElementById(tableId);
-                var htmlTable = selectTable.outerHTML.replace(/ /g, '%20');
-                
-                filename = filename?filename+'.xls':excelFileName+'.xls';
-                var excelFileURL = document.createElement("a");
-                document.body.appendChild(excelFileURL);
-                
-                if(navigator.msSaveOrOpenBlob){
-                    var blob = new Blob(['\ufeff', htmlTable], {
-                        type: TableDataType
-                    });
-                    navigator.msSaveOrOpenBlob( blob, fileName);
-                }else{
-                    
-                    excelFileURL.href = 'data:' + TableDataType + ', ' + htmlTable;
-                    excelFileURL.download = fileName;
-                    excelFileURL.click();
-                }
-            }*/
+                else if ( j == 2) {
 
-           
+                    let temp = oTable.rows[i].cells[j].getElementsByTagName("input")[0].value;
+                    map.subject_name = capitalize(temp);
+                }
+                
+                else {
+
+                    map.subject_short_name = oTable.rows[i].cells[j].getElementsByTagName("input")[0].value.toUpperCase();
+                }
+            }
+            // console.log("Success");
+            subjects.push(map);
+        }
+        console.log(subjects);
+
+        /****** For labs **********/
+        oTable = document.getElementById('lab');
+
+        //gets rows of table
+        rowLength = oTable.rows.length;
+
+        var labs = [];
+
+        //loops through rows    
+        for (i = 1; i < rowLength; i++){
+
+            //gets cells of current row
+            var oCells = oTable.rows.item(i).cells;
+
+            //gets amount of cells of current row
+            var cellLength = oCells.length;
+
+            //loops through each cell in current row
+            var map = {
+                lab_code: "",
+                lab_name: "",
+                lab_short_name: "" 
+            };
+            
+            for(var j = 1; j < cellLength; j++){
+                /* get your cell info here */
+                /* var cellVal = oCells.item(j).innerHTML; */
+                if (j == 1) {
+
+                    map.lab_code = oTable.rows[i].cells[j].getElementsByTagName("input")[0].value.toUpperCase();
+                }
+                else if ( j == 2) {
+
+                    let temp = oTable.rows[i].cells[j].getElementsByTagName("input")[0].value;
+                    map.lab_name = capitalize(temp);
+                }
+                
+                else {
+
+                    map.lab_short_name = oTable.rows[i].cells[j].getElementsByTagName("input")[0].value.toUpperCase();
+                }
+            }
+            // console.log("Success");
+            labs.push(map);
+        }
+        console.log(labs);
+
+        database.ref("Subjects/" + regulation + "/" + branch + "/" + semester).set(subjects);
+        database.ref("Labs/" + regulation + "/" + branch + "/" + semester).set(labs);
+        
+        alert("Subjects and Regulation saved successfully!");
+    }
+});
+
+
+function capitalize(str) {
+
+    var temp = str.split(" ");
+    var res = "";
+    for (let i = 0; i < temp.length; i ++) {
+
+        res += temp[i].substring(0, 1).toUpperCase() + temp[i].substring(1) + " ";
+    }
+    return res;
+}
+
