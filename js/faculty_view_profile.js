@@ -36,8 +36,8 @@ auth.onAuthStateChanged(function(user) {
     if (snapshot.exists()) {
       const facultyData = snapshot.val();
       facultyName.value = facultyData.Name;
-      facultyPhone.value = facultyData.Email;
-      facultyEmail.value = facultyData.Phoneno;
+      facultyPhone.value = facultyData.Phoneno;
+      facultyEmail.value = facultyData.Email;
       
     } 
   })
