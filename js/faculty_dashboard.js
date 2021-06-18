@@ -22,7 +22,7 @@ auth.onAuthStateChanged(function(user) {
   // console.log(user.displayName);
   if (user) {
   
-          facultyNameDisplay.innerHTML = user.displayName + "<i class='fa fa-angle-down'></i>";
+          facultyNameDisplay.innerHTML = 'Hello!!    '+ user.displayName + "<i class='fa fa-angle-down'></i>";
   } else {
           window.location.href = "./faculty_login.html";
   }      

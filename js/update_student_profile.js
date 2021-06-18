@@ -100,20 +100,6 @@ function get_Data(){
   interurl=document.getElementById("interurl").value;
   interyear=document.getElementById("interyear").value;
 }
-//validation
-// function check() {
-//   if(document.getElementById("branch").value !== "Branch")
-//       {
-//           if(document.getElementById("gender").value !== "gender"){
-//          alert("Please fill out all details to Check ur profile ");
-//       }
-//      }
-//       else{
-//          alert("Profile has been Saved Successfully!! you can Check ur profile ");
-//       }
-//     }
-
-
 function addressFunction() {
   if (document.getElementById(
   "same").checked) {
@@ -176,17 +162,6 @@ document.getElementById('save').onclick=function(){
   window.location.href="./view_student_profile.html";
 }
 }
-
-// const dbRef = firebase.database().ref();
-// dbRef.child("students_details").child(209189857677).get().then((snapshot) => {
-//   if (snapshot.exists()) {
-//     console.log(snapshot.val());
-//   } else {
-//     console.log("No data available");
-//   }
-// }).catch((error) => {
-//   console.error(error);
-// });
  var student;
 auth.onAuthStateChanged(function(user) {
 

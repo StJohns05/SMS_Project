@@ -30,6 +30,27 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- modernizr css -->
     <script src="js/modernizr-2.8.3.min.js"></script>
+
+    <style>
+        .container {   
+
+background-color:#8a3147;  
+color:white;
+margin-top: 100px;
+text-align: justify;
+height:fit-content;
+width:600px;
+margin-left: 400;
+text-decoration: #ccc;
+font-style: normal;
+text-align: center;
+align-content: center;
+padding:2%;
+
+
+
+}
+    </style>
 </head>
 
 <body>
@@ -55,6 +76,7 @@
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                                 <ul class="collapse">
+                                    <li><a href="#">Notification</a></li>
                                     <li><a href="view_student_profile.html">Profile</a></li>
                                     <li><a href="#">Result</a></li>
                                     
@@ -178,7 +200,7 @@
                         
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Message</a>
-                                <a class="dropdown-item" id="sign-out-btn" href="./studentlogin.html">Sign Out</a>
+                                <a class="dropdown-item" id="sign-out-btn" href="./index.html">Sign Out</a>
                             
 
                                
@@ -192,7 +214,15 @@
             <!--Main Content area starts-->
 
             <div class="main-content-inner">
-
+                <h4 class="main-content-inner" id="student-name"></h4>
+                <div class="container">
+                   <p> <img src="./assets/images/logocl.jpg" width="70" height="20"></p><br>
+               <center> <p id="blink" style="font-size:  30px; color: white;">   <strong>WELCOME TO <br><br>ST. JOHNS COLLEGE OF ENGINEERING AND TECHNOLOGY
+                </strong>
+                     </p></center>
+                    
+                        
+            </div>
             </div>
  <!--main content area end-->
                     
@@ -222,9 +252,18 @@
     <script src="js/metisMenu.min.js"></script>
     <script src="js/jquery.slimscroll.min.js"></script>
     <script src="js/jquery.slicknav.min.js"></script>
+
+    
     <script src="js/plugins.js"></script>
     <script src="js/scripts.js"></script>
     <script src="./js/student_dashboard.js"></script>
+
+    <!-- <script type="text/javascript">
+        var blink = document.getElementById('blink');
+        setInterval(function() {
+            blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+        }, 500);
+    </script> -->
 </body>
 
 </html>

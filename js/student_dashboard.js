@@ -22,9 +22,11 @@ auth.onAuthStateChanged(function(user) {
     // console.log(user.displayName);
     if (user) {
     
-            studentNameDisplay.innerHTML = user.displayName + "<i class='fa fa-angle-down'></i>";
+            studentNameDisplay.innerHTML = 'Hello!!    '+ user.displayName + "<i class='fa fa-angle-down'></i>";
+/*             document.body.studentNameDisplay.innerHTML = 'Welcome'+ user.displayName+  "<i class='fa fa-angle-down'></i>"; */
+            document.getElementById("student-name").style.display ="initial";
     } else {
-            window.location.href = "./studentlogin.html";
+            window.location.href = "./index.html";
     }      
 });
 

@@ -30,6 +30,27 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- modernizr css -->
     <script src="js/modernizr-2.8.3.min.js"></script>
+
+    <style>
+        .container {   
+
+background-color:#8a3147;  
+color:white;
+margin-top: 100px;
+text-align: justify;
+height:fit-content;
+width:600px;
+margin-left: 400;
+text-decoration: #ccc;
+font-style: normal;
+text-align: center;
+align-content: center;
+padding:2%;
+
+
+
+}
+    </style>
 </head>
 
 <body>
@@ -59,10 +80,9 @@
                                 <ul class="collapse">
                                     
                                     <li><a href="./faculty_view_profile.html" >Profile</a></li>
-                                    <li><a href="subject_sem_regulation.html" target="_parent">Add New Subjects and Regulation</a></li>
-                                    <li><a href="./fill_marks.html" target="_parent">Fill Results</a></li>
-                                    <li><a href="./fetch_results.html" target="_parent">Fetch Results</a></li>
-
+                                    <li><a href="./subject_sem_regulation.html" target="_parent">Subjects/Regulation</a></li>
+                                    <li><a href="./fill_marks.html" target="_parent">Enter Marks</a></li>
+                                      <li><a href="./fetch_results.html" target="_parent">Check Results</a></li>
                                     <li><a href="#" target="_parent">Overall Performance</a></li>
 
                                 </ul>
@@ -74,7 +94,7 @@
                                
                             </li>
                             <li>
-                                <a href="#" aria-expanded="true" target="_parent"><i class="ti-comments"></i><span> Feedback Form</span></a>
+                                <a href="#" aria-expanded="true" target="_parent"><i class="ti-comments"></i><span>Results Feedback Form</span></a>
                                
                             </li>
                             
@@ -96,14 +116,6 @@
                             <span></span>
                             <span></span>
                         </div>
-
-                        <!-- <div class="search-box pull-left">
-                            <form action="#">
-                                <input type="text" name="search" placeholder="Search..." required>
-                                <i class="ti-search"></i>
-                            </form>
-                        </div> -->
-
                     </div>
                     <!-- profile info & task notification -->
                     <div class="col-md-6 col-sm-4 clearfix">
@@ -193,7 +205,7 @@
                             <h4 class="user-name dropdown-toggle" id="faculty-name" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Message</a>
-                                <a class="dropdown-item" id="sign-out-btn" href="./faculty_login.html">Sign Out</>
+                                <a class="dropdown-item" id="sign-out-btn" href="./faculty_login.html">Sign Out</a>
                             </div>
                         </div>
                     </div>
@@ -202,6 +214,11 @@
              <!-- page title area end -->
 
              <div class="main-content-inner">
+                <div class="container">
+                    <p> <img src="./assets/images/logocl.jpg" width="70" height="20"></p><br>
+                <center> <p id="blink" style="font-size:  30px; color: white;">   <strong>WELCOME TO <br><br>ST. JOHNS COLLEGE OF ENGINEERING AND TECHNOLOGY
+                 </strong>
+                      </p></center>
                  
              </div>
                 </div>
@@ -219,9 +236,7 @@
         <!-- footer area end-->
     </div>
     <!-- page container area end -->
-    <!-- offset area start -->
-    
-    <!-- offset area end -->
+   
     <!-- jquery latest version -->
     <script src="js/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->
@@ -236,6 +251,13 @@
     <script src="js/plugins.js"></script>
     <script src="js/scripts.js"></script>
     <script src="./js/faculty_dashboard.js"></script>
+
+    <!-- <script type="text/javascript">
+        var blink = document.getElementById('blink');
+        setInterval(function() {
+            blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+        }, 500);
+    </script> -->
     
 </body>
 
