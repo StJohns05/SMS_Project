@@ -7,21 +7,43 @@
     <title>srtdash - Admin Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/metisMenu.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/slicknav.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/metisMenu.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/slicknav.min.css">
     <!-- amchart css -->
     <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
     <!-- others css -->
-    <link rel="stylesheet" href="assets/css/typography.css">
-    <link rel="stylesheet" href="assets/css/default-css.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/default-css.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <!-- modernizr css -->
-    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+             border-collapse: collapse;
+                 width: 100%;
+        }
+
+        td, th {
+             border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+             background-color: #dddddd;
+        }
+
+        table {
+                border-spacing: 5px;
+              }
+    </style>
+
 </head>
 
 <body>
@@ -47,48 +69,43 @@
                     <nav>
                         <ul class="metismenu" id="menu">
                             <li class="active">
-                                <a href="index2.html" aria-expanded="true"><i class="ti-dashboard"></i><span>Admin dashboard</span></a>
+                                <a href="admin_dashboard.html" aria-expanded="true"><i class="ti-dashboard"></i><span>Admin dashboard</span></a>
 
-                                
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-pie-chart"></i><span>Attendance</span></a>
-                                <ul class="collapse">
-                                    <li><a href="barchart.html">Student Attendance</a></li>
-                                    <li><a href="piechart.html">Staff Attendance</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="message description.html" aria-expanded="true"><i class="ti-palette"></i><span>Message </span></a>
                                 
                             </li>
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-table"></i>
                                     <span>student data</span></a>
                                 <ul class="collapse">
-                                    <li><a href="table-basic.html">student results</a></li>
+                                    <li><a href="student_results.html">student results</a></li>
                                     <!--<li><a href="table-layout.html">table layout</a></li> -->
-                                    <li><a href="data table.html">list of students</a></li>
+                                    <li><a href="list_of_students.html">list of students</a></li>
                                 </ul>
                             </li>
-                            <li><a href="maps.html"aria-expanded="true"><i class="ti-map-alt"></i> <span>Placements</span></a>
-                              <ul class="collapse">
-                                <li><a href="barchart.html">on campus</a></li>
-                                <li><a href="piechart.html">off campus</a></li>
-                              </ul>
-                            </li> 
-                            <li><a href="invoice.html"><i class="ti-receipt"></i> <span>Academic Projects</span></a></li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-table"></i>
+                                    <span>faculty data</span></a>
+                                <ul class="collapse">
+                                    
+                                    <!--<li><a href="table-layout.html">table layout</a></li> -->
+                                    <li><a href="list_of_faculty.html">list of faculty</a></li>
+                                   
+                                    
+                                </ul>
+                            </li>
+                           
+                            <li><a href="academic_projects.html"><i class="ti-receipt"></i> <span>Academic Projects</span></a></li>
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layers-alt"></i> <span>semister-wise data</span></a>
                                 <ul class="collapse">
-                                    <li><a href="login.html">semister1 data</a></li>
-                                    <li><a href="login2.html">semister2 data</a></li>
-                                    <li><a href="login3.html">semister3 data</a></li>
-                                    <li><a href="register.html">semister4 data</a></li>
-                                    <li><a href="register2.html">semister5 data</a></li>
-                                    <li><a href="register3.html">semister6 data</a></li>
-                                    <li><a href="register4.html">semister7 data</a></li>
-                                    <li><a href="screenlock.html">semister8 data</a></li>
+                                    <li><a href="sem1.data.html">semister1 data</a></li>
+                                    <li><a href="sem2.data.html">semister2 data</a></li>
+                                    <li><a href="sem3.data.html">semister3 data</a></li>
+                                    <li><a href="sem4.html">semister4 data</a></li>
+                                    <li><a href="sem5.data.html">semister5 data</a></li>
+                                    <li><a href="sem6.data.html">semister6 data</a></li>
+                                    <li><a href="sem7.data.html">semister7 data</a></li>
+                                    <li><a href="sem8.data.html">semister8 data</a></li>
                                    
                                 </ul>
                             </li>
@@ -97,16 +114,12 @@
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-table"></i>
                                     <span> contact data</span></a>
                                 <ul class="collapse">
-                                    <li><a href="table-basic.html">faculty contacts</a></li>
+                                    <li><a href="faculty_contacts.html">faculty contacts</a></li>
                                     <!--<li><a href="table-layout.html">table layout</a></li>  here the contact  should contain phno with mail id -->
-                                    <li><a href="data table.html">students contacts</a></li>
+                                    <li><a href="students_contacts.html">students contacts</a></li>
                                 </ul>
                             </li>
-                            <li>
-                                <a href="404.html"><i class="fa fa-exclamation-triangle"></i>
-                                    <span>logout</span></a><!--direct to admin login page -->
-                               
-                            </li>
+                           
                         </ul>
                     </nav>
                 </div>
@@ -156,8 +169,8 @@
                         <div class="breadcrumbs-area clearfix">
                             <h4 class="page-title pull-left">Dashboard</h4>
                             <ul class="breadcrumbs pull-left">
-                                <li><a href="index.html">Home</a></li>
-                                <li><span>Basic</span></li>
+                                <li><a href="admin_dashboard.html">Home</a></li>
+                                <li><span>Sem1 Data</span></li>
                             </ul>
                         </div>
                     </div>
@@ -168,7 +181,7 @@
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Message</a>
                                 <a class="dropdown-item" href="#">Settings</a>
-                                <a class="dropdown-item" href="#">Exit</a>
+                                <a class="dropdown-item" href="#">sign out</a>
                             </div>
                         </div>
                     </div>
@@ -190,23 +203,23 @@
     </div>
     <!-- offset area end -->
     <!-- jquery latest version -->
-    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/metisMenu.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.min.js"></script>
-    <script src="assets/js/jquery.slicknav.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/metisMenu.min.js"></script>
+    <script src="js/jquery.slimscroll.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
 
-    <script src="assets/js/line-chart.js"></script>
+    <script src="js/line-chart.js"></script>
     <!-- all bar chart activation -->
-    <script src="assets/js/bar-chart.js"></script>
+    <script src="js/bar-chart.js"></script>
     <!-- all pie chart -->
-    <script src="assets/js/pie-chart.js"></script>
+    <script src="js/pie-chart.js"></script>
     <!-- others plugins -->
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/scripts.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
